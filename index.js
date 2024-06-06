@@ -1,9 +1,14 @@
 //returns a distance in blocks
 //calculates distances below 42nd street
 
+
 function distanceFromHqInBlocks(block){
   const hqBlock = 42;
-  return Math.abs(block - hqBlock);
+  if (block >= hqBlock){
+    return block - hqBlock;
+  } else {
+    return hqBlock - block;
+  }
 }
 
 console.log(distanceFromHqInBlocks(50));
@@ -33,6 +38,7 @@ function distanceTravelledInFeet(startBlock, endBlock) {
   const feetPerBlock = 264;
   return distance * feetPerBlock;
 }
+
 
 console.log(distanceTravelledInFeet(43, 48));
 
